@@ -1,5 +1,5 @@
 pipeline{
-    agent {dockerfile true}
+    agent any
 
     stages{
         stage ('Checkout'){
@@ -25,6 +25,11 @@ pipeline{
         stage ('Deploy'){
             steps{
                 powershell 'docker build-t deployment-env .'
+            }
+        }
+        stage ('Production'){
+            steps{
+                powershell 'docker run deployment_env'
             }
         }
     }
