@@ -1,5 +1,5 @@
 pipeline{
-    agent {Dockerfile true}
+    agent {dockerfile true}
 
     stages{
         stage ('Checkout'){
@@ -11,20 +11,20 @@ pipeline{
 
         stage ('Build'){
             steps {
-                powershell 'gradle build'
+                powershell 'gradlew build'
             }
 
         }
 
         stage ('Test'){
             steps{
-                powewrshell 'gradle test'
+                powewrshell 'gradlew test'
             }
         }
 
         stage ('Deploy'){
             steps{
-                echo 'deploy is deploying'
+                powershell 'docker build-t deployment-env .'
             }
         }
     }
