@@ -11,14 +11,14 @@ pipeline{
 
         stage ('Build'){
             steps {
-                powershell './gradle build'
+                bat 'gradle build'
             }
 
         }
 
         stage ('Test'){
             steps{
-                powewrshell './gradle test'
+                bat 'gradle test'
             }
         }
 
