@@ -24,7 +24,7 @@ pipeline{
 
         stage ('Deploy'){
             steps{
-                powershell 'docker build-t deployment-env .'
+                powershell 'docker build -t deployment-env .'
             }
         }
         stage ('Production'){
