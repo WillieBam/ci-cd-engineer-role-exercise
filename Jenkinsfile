@@ -1,9 +1,12 @@
 pipeline{
-    agent any
+    agent {dockerfile true
+    }
+
     stages{
         stage ('Checkout'){
             steps{
-                git branch :
+                git branch : 'master',
+                url :'https://github.com/WillieBam/ci-cd-engineer-role-exercise.git'
             }
         }
 
@@ -22,7 +25,7 @@ pipeline{
 
         stage ('Deploy'){
             steps{
-                powershell 'java -jar build/libs/hello-world-java-V1.jar'
+                echo 'deploy is deploying'
             }
         }
     }
