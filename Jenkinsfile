@@ -29,7 +29,7 @@ pipeline{
         }
         stage ('Production'){
             steps{
-                powershell 'docker run deployment_env'
+                powershell 'docker run deployment_env:latest'
             }
         }
     }
