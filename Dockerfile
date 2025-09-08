@@ -8,4 +8,4 @@ WORKDIR /app
 COPY build/libs/hello-world-java-V1.jar /app/hello-world-java-V1.jar
 
 # Run the application (replace HelloWorld with your actual JAR name if different)
-ENTRYPOINT ["java", "-jar", "app/hello-world-java-V1.jar"]
+ENTRYPOINT ["java", "-jar", "/app/hello-world-java-V1.jar"]
