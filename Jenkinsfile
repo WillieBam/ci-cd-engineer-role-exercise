@@ -11,14 +11,14 @@ pipeline{
 
         stage ('Build'){
             steps {
-                powershell 'gradlew build'
+                powershell './gradlew build'
             }
 
         }
 
         stage ('Test'){
             steps{
-                powewrshell 'gradlew test'
+                powewrshell './gradlew test'
             }
         }
 
