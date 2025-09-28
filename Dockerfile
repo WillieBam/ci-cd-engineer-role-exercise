@@ -2,7 +2,7 @@
 FROM openjdk:8-jdk
 
 # Set the working directory
-WORKDIR /appS
+WORKDIR /app
 
 # COPY FROM source to destination
 COPY build/libs/hello-world-java-V1.jar /app/hello-world-java-V1.jar
