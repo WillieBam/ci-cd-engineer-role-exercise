@@ -11,7 +11,7 @@ pipeline{
 
         stage ('Build'){
             steps {
-                bat 'gradle build'
+                powershell './gradlew build'
             }
 
         }
