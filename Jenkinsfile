@@ -15,7 +15,7 @@ pipeline{
             }
 
         }
-
+//ok
         stage ('Test'){
             steps{
                 bat 'gradle test'
