@@ -1,4 +1,5 @@
 pipeline{
+    
     agent any
 
     stages{
@@ -11,7 +12,7 @@ pipeline{
 
         stage ('Build'){
             steps {
-                powershell 'gradle build'
+                bat 'gradle build'
             }
 
         }
