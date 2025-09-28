@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage ('Checkout'){
             steps{
-                git branch : 'master',
+                git branch : 'master'
                 url :'https://github.com/WillieBam/ci-cd-engineer-role-exercise.git'
             }
         }
